@@ -11,7 +11,8 @@ from flask_cors import CORS
 model = tf.keras.models.load_model('mnist_model.keras')
 
 app = Flask(__name__)
-CORS(app, origins=["https://localhost:8000"])
+#CORS(app, origins=["https://focus-flow-container:8000"]) 
+CORS(app)
 
 def preprocess_image(image):
     # 1. Decode base64 image
